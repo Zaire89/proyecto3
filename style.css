@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&family=Satisfy&display=swap');
+
+/* grid paginas secundarias  */
+
+#grilla {
+    display: grid;
+    grid-template-areas: "header header header" "section section section" "footer footer footer";
+    grid-template-rows: 200px auto 75px;
+    grid-template-columns: 200px auto 200px;
+}
+
+.header-inicio {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    font-family: montserrat;
+    color: black;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    grid-area: section;
+    width: auto;
+    display: flex;
+    flex-direction: raw;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    bottom: 0%;
+    clear: both;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+
+/* general */
+
+.titulos {
+    color: black;
+    font-family: satisfy;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* index */
+
+#frase {
+    color: black;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+
+/* footer */
+
+.iconos {
+    padding: 2px
+}
+
+.iconos:hover {
+    transform: rotate(-15deg)
+}
+
+
+/* menú inicial */
+
+.nav-link {
+    font-family: montserrat;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-link:hover {
+    color: coral;
+    cursor: pointer;
+}
+
+.dropdown-item {
+    font-family: montserrat;
+    font-weight: 600;
+    background: black;
+    color: white;
+}
+
+.dropdown-item:hover {
+    cursor: pointer;
+    color: coral;
+}
+
+.page-section {
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 150px;
+}
+
+
+/* servicios animacion */
+
+.divPubli {
+    animation-name: animate_off;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+@keyframes animate_off {
+    0% {
+        transform: translate(0px, -200px);
+    }
+    50% {
+        transform: translate(0px, -80px);
+        transform: rotate(180deg);
+    }
+    80% {
+        transform: translate(0px, 0px);
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: translate(0px, 0px);
+        transform: scale(1.4);
+    }
+}
+
+table {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: block;
+}
+
+
+/* sobre mi */
+
+.divTexto {
+    margin-left: 50px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.divVideo {
+    margin-top: 80px;
+    margin-right: 50px;
+    height: 280px;
+}
+
+
+/* contacto */
+
+.consulta {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.formulario {
+    width: 400px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 35px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-color: black;
+}
+
+.aclaracion {
+    color: black;
+    font-size: 12px;
+    font-weight: 300;
+    word-spacing: 2px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#boton {
+    font-size: 15px;
+    width: 120px;
+    height: 35px;
+    font-family: montserrat;
+    font-weight: 600;
+    border-radius: 90px;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+#boton:hover {
+    background-color: coral;
+}
+
+#boton:focus {
+    background: black;
+    color: coral;
+    outline: none;
+}
+
+@media only screen and (min-width:320px) {
+    #grilla {
+        grid-template-columns: 3, 1;
+        grid-template-rows: 4;
+    }
+    #grillaIndex {
+        grid-template-columns: 1;
+        grid-template-rows: 4;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    #grilla {
+        grid-template-columns: 4;
+        grid-template-rows: 4;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    #grilla {
+        grid-template-columns: 4;
+        grid-template-rows: auto;
+    }
+}
